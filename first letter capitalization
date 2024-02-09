@@ -1,0 +1,21 @@
+//capitalizes the first letter of each word in the string. 'hi' and 'trying to become an expert programmer'
+
+importScripts
+function capitalizeWords(str) {
+  const words = str.split(" ");
+  const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+  return capitalizedWords.join(" ");
+}
+
+// trying the examples stated
+const str1 = "hi";
+const str2 = "trying to become an expert programmer";
+
+const capitalizedStr1 = capitalizeWords(str1);
+const capitalizedStr2 = capitalizeWords(str2);
+
+console.log("Original string:", str1);
+console.log("Capitalized string:", capitalizedStr1); //resulting output: Hi
+
+console.log("Original string:", str2);
+console.log("Capitalized string:", capitalizedStr2); //resulting output: Trying To Become An Expert Programmer
