@@ -1,0 +1,14 @@
+//counting vowels
+
+importScripts
+function countVowels(sentence) {
+  sentence = sentence.toLowerCase();
+  const vowelRegex = /[aeiou]/g;
+  const matches = sentence.match(vowelRegex);
+  return matches ? matches.length : 0;
+}
+
+// using 'becoming an expert programmer in javascript' example
+const sentence = "becoming an expert programmer in javascript";
+const vowelCount = countVowels(sentence);
+console.log("Number of vowels in", sentence, ":", vowelCount); // resulting output: Number of vowels in becoming an expert programmer in javascript : 13
