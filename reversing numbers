@@ -1,0 +1,26 @@
+//reversing numbers
+
+importScripts
+function reverseInteger(num) {
+  let reversed = 0;
+  let isNegative = num < 0;
+  num = Math.abs(num); 
+
+  while (num !== 0) {
+    const digit = num % 10;
+    reversed = reversed * 10 + digit;
+    num = Math.floor(num / 10);
+  }
+
+  if (reversed > 2 ** 31 - 1 || reversed < -2 ** 31) {
+    return 0;
+  }
+
+  return isNegative ? -reversed : reversed;
+}
+
+// using provided examples of 500,-56,-90 & 91
+console.log(reverseInteger(500));  // resulting output is: 5
+console.log(reverseInteger(-56));  // resulting output: -65
+console.log(reverseInteger(-90));  // resulting output: -9
+console.log(reverseInteger(91));   // resulting output: 19
